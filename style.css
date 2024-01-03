@@ -9,6 +9,7 @@
   --secondary: hsl(275, 100%, 97%);
   --primary: hsl(292, 16%, 49%);
   --title: hsl(292, 42%, 14%);
+  --hover: hsl(281, 83%, 54%);
 }
 
 html {
@@ -27,15 +28,13 @@ body {
   flex-direction: column;
   gap: 40px;
   min-height: 100vh;
-  position: relative;
-  top: 100px;
 }
 
 .faqs__accordion {
+  width: 100%;
   max-width: 700px;
   background-color: var(--card-bg);
-  padding: 30px 4%;
-  overflow-y: auto;
+  padding: 50px 3%;
   border-radius: 15px;
   box-shadow: 0 0 10px var(--primary);
 }
@@ -59,6 +58,15 @@ body {
   align-items: center;
 }
 
+.faqs__question--block:hover,
+.question__btn:hover {
+  cursor: pointer;
+}
+
+.faqs__question--block:hover .faqs__question {
+  color: var(--hover);
+}
+
 .faqs__question {
   color: var(--title);
 }
@@ -70,4 +78,29 @@ body {
 
 .question__answer {
   color: var(--primary);
+  width: 85%;
+}
+
+hr {
+  border: 1px solid var(--secondary);
+}
+
+.question__answer {
+  display: none;
+}
+
+.show-text .question__answer {
+  display: block;
+}
+
+.minus {
+  display: none;
+}
+
+.show-text .minus {
+  display: inline;
+}
+
+.show-text .plus {
+  display: none;
 }
