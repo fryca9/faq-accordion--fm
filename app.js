@@ -1,7 +1,6 @@
 const questions = document.querySelectorAll(".faqs__question--block");
-const toggle = document.querySelectorAll(".question--line");
 
-toggle.forEach(function showText(btn, index) {
+questions.forEach(function showText(btn, index) {
   btn.addEventListener("click", function toggleClass() {
     const currentQuestion = questions[index];
     const isAlreadyOpened = currentQuestion.classList.contains("show-text");
